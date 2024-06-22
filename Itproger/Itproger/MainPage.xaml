@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Itproger.MainPage">
+
+    <StackLayout BackgroundColor="#f3f2f8" Padding="10,20">
+        <Frame Background="#e4e3e9" CornerRadius="10" Padding="5,0,0,0">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="C:\VOVA\C#\Code\Itproger\source\magnifying-glass-svgrepo-com (1).png" WidthRequest="20" HeightRequest="20"/>
+                <Entry Placeholder="Search" Margin="5,0,0,0" WidthRequest="300"/>
+            </StackLayout>
+        </Frame>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToToday" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="0" Margin="10" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToSchedule" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Column="0" Grid.Row="1" Margin="10" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToAll" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="1" Margin="10" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToExecuted" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+                <Label Text="My lists" FontSize="25" FontAttributes="Bold" TextColor="Black"/>
+                <Frame  CornerRadius="15" Padding="0" >
+                    <StackLayout>
+                        <Button x:Name="buttonSend" Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button x:Name="" Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
+                    
+                        <Label Text="Click me!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToExecuted" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                        
+                </StackLayout>
+                </Frame>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>
