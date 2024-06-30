@@ -12,8 +12,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\add-svgrepo-com.png" />
+    <None Remove="Image\arhive-alt-small-svgrepo-com.png" />
+    <None Remove="Image\arrow-right-circle-svgrepo-com.png" />
+    <None Remove="Image\calendar-add-svgrepo-com.png" />
+    <None Remove="Image\calendar-svgrepo-com.png" />
+    <None Remove="Image\check-ring-svgrepo-com.png" />
+    <None Remove="Image\list-ul-alt-svgrepo-com.png" />
+    <None Remove="Image\magnifying-glass-svgrepo-com %281%29.png" />
+    <None Remove="Image\magnifying-glass-svgrepo-com %282%29.svg" />
+    <None Remove="Image\magnifying-glass-svgrepo-com.png" />
+    <None Remove="Image\order-svgrepo-com.png" />
+    <None Remove="Image\send-svgrepo-com.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Image\add-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\arhive-alt-small-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\arrow-right-circle-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\calendar-add-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\calendar-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\check-ring-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\list-ul-alt-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\magnifying-glass-svgrepo-com (1).png" />
+    <EmbeddedResource Include="Image\magnifying-glass-svgrepo-com (2).svg" />
+    <EmbeddedResource Include="Image\magnifying-glass-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\order-svgrepo-com.png" />
+    <EmbeddedResource Include="Image\send-svgrepo-com.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +51,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Executed.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Schedule.xaml">

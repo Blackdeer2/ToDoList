@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace Itproger
 {
    [XamlCompilation(XamlCompilationOptions.Compile)]
    public partial class All : ContentPage
    {
+
       public All()
       {
          InitializeComponent();
+         
       }
    }
 }

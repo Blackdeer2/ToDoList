@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Itproger.MainPage">
+             x:Class="Itproger.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout BackgroundColor="#f3f2f8" Padding="10,20">
-        <Frame Background="#e4e3e9" CornerRadius="10" Padding="5,0,0,0">
+        <Frame Background="#e4e3e9" CornerRadius="10" Padding="5,0,0,0" Margin="0,0,0,20">
             <StackLayout Orientation="Horizontal">
-                <Image Source="C:\VOVA\C#\Code\Itproger\source\magnifying-glass-svgrepo-com (1).png" WidthRequest="20" HeightRequest="20"/>
-                <Entry Placeholder="Search" Margin="5,0,0,0" WidthRequest="300"/>
+                <Image x:Name="dandruff" WidthRequest="20"/>
+                <Entry Placeholder="Search" WidthRequest="300"/>
             </StackLayout>
         </Frame>
         <ScrollView>
@@ -23,59 +24,81 @@
                     </Grid.RowDefinitions>
                     <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="10" CornerRadius="10">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="GoToToday" />
+                            <TapGestureRecognizer Tapped="GoToToday"/>
                         </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image x:Name="toDay" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                                <Label Text="0" FontSize="35" FontAttributes="Bold" TextColor="Black" 
+                                       HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                            </StackLayout>
+                            <Label Text="Today" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                        </StackLayout>
                     </Frame>
-                    <Frame Grid.Column="1" Grid.Row="0" Margin="10" CornerRadius="10">
+                    <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="10" CornerRadius="10">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="GoToSchedule" />
                         </Frame.GestureRecognizers>
+                        <StackLayout >
+                            <StackLayout Orientation="Horizontal">
+                                <Image x:Name="schedule" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                                <Label Text="0" FontSize="35" FontAttributes="Bold" TextColor="Black" 
+                                       HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                            </StackLayout>
+                            <Label Text="With schedule" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                        </StackLayout>
                     </Frame>
-                    <Frame Grid.Column="0" Grid.Row="1" Margin="10" CornerRadius="10">
+                    <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="10" CornerRadius="10">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="GoToAll" />
                         </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image x:Name="all" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                                <Label Text="0" FontSize="35" FontAttributes="Bold" TextColor="Black" 
+                                       HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                            </StackLayout>
+                            <Label Text="All" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                        </StackLayout>
                     </Frame>
-                    <Frame Grid.Column="1" Grid.Row="1" Margin="10" CornerRadius="10">
+                    <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="10" CornerRadius="10">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="GoToExecuted" />
                         </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image x:Name="executed" WidthRequest="50" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <Label Text="Executed" FontSize="15" FontAttributes="Bold" Margin="10,0,0,0" />
+                        </StackLayout>
                     </Frame>
                 </Grid>
                 <Label Text="My lists" FontSize="25" FontAttributes="Bold" TextColor="Black"/>
-                <Frame  CornerRadius="15" Padding="0" >
-                    <StackLayout>
-                        <Button x:Name="buttonSend" Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button x:Name="" Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                        <Button Text="Click me" VerticalOptions="Center" Clicked="ButtonClick"  BorderWidth="1" BorderColor="red" />
-                    
-                        <Label Text="Click me!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="GoToExecuted" />
-                        </Label.GestureRecognizers>
-                    </Label>
-                        
-                </StackLayout>
+                <Frame BackgroundColor="#ffffff" CornerRadius="10" Padding="10,5">
+                    <ListView x:Name="listview" ItemSelected="listview_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding IconList}" WidthRequest="30" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Name}" VerticalOptions="Center" FontSize="20" TextColor="Black"/>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                            <Label Text="{Binding Count}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
+                                                   FontSize="20"/>
+                                            <Image Source="{Binding IconArrowList}" WidthRequest="20" VerticalOptions="Center" 
+                                                   HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Text="Info" Clicked="InfoClicked" CommandParameter="{Binding .}"/>
+                                        <MenuItem Text="Delete" Clicked="DeleteClicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                    </ViewCell.ContextActions>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Frame>
-
             </StackLayout>
-
         </ScrollView>
-
     </StackLayout>
-
 </ContentPage>

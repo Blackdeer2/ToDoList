@@ -17,3 +17,5 @@ C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Executed.xam
 C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\All.xaml.g.cs
 C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Schedule.xaml.g.cs
 C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Today.xaml.g.cs
+C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Itproger.sourcelink.json
+C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\ListDetailPage.xaml.g.cs
