@@ -19,3 +19,5 @@ C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Schedule.xam
 C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Today.xaml.g.cs
 C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Itproger.sourcelink.json
 C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\ListDetailPage.xaml.g.cs
+C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\NewReminderPage.xaml.g.cs
+C:\VOVA\C#\Code\Itproger\Itproger\Itproger\obj\Debug\netstandard2.0\Extensions\BlueUnderlinedText.xaml.g.cs
