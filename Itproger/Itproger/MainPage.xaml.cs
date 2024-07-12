@@ -1,4 +1,5 @@
 ﻿using Itproger.Models;
+using SQLite;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,24 +14,17 @@ namespace Itproger
 {
    public partial class MainPage : ContentPage
    {
-      /*private List<MyList> _mylist;
-      List<MyList> GetMyLists()
-      {
-         return new List<MyList> {
-            new MyList("Нагадування"),
-            new MyList("С#"),
-            new MyList("1")
-         };
-      }*/
+      private SQLiteAsyncConnection _connectionMyList;
+      private ObservableCollection<MyList> _myLists;
 
       public MainPage()
       {
          InitializeComponent();
-       var connection =  DependencyService.Get<ISQLiteDb>().GetConnection();
-         connection.CreateTableAsync<MyList>();
+         _connectionMyList = DependencyService.Get<ISQLiteDb>().GetConnection();
+
       }
 
-      protected override void OnAppearing()
+      protected override async void OnAppearing()
       {
          //IMAGES
          // Start 
@@ -40,14 +34,37 @@ namespace Itproger
          all.Source = ImageSource.FromResource("Itproger.Image.arhive-alt-small-svgrepo-com.png");
          executed.Source = ImageSource.FromResource("Itproger.Image.check-ring-svgrepo-com.png");
          newReminder.Source = ImageSource.FromResource("Itproger.Image.add-svgrepo-com.png");
+         //iconList.Source = ImageSource.FromResource("Itproger.Image.list-ul-alt-svgrepo-com.png");
+         //iconArrowList = ImageSource.FromResource("Itproger.Image.arrow-right-circle-svgrepo-com.png");
          // End
 
-
-/*         _mylist = GetMyLists();
-         listview.ItemsSource = _mylist;*/
+         await _connectionMyList.CreateTableAsync<MyList>();
+         var myList = await _connectionMyList.Table<MyList>().ToListAsync();
+         _myLists = new ObservableCollection<MyList>(myList);
+         listview.ItemsSource = _myLists;
 
       }
+      private async void AddList(object sender, System.EventArgs e)
+      {
+         string listName = listNameEntry.Text;
 
+         if (!string.IsNullOrWhiteSpace(listName))
+         {
+            // var list = new MyList { Name = $"{listNameEntry.Text} " };
+            var list = new MyList(listName);
+            await _connectionMyList.InsertAsync(list);
+            _myLists.Add(list);
+            listNameEntry.Text = null;
+            }
+      }
+
+      private async void DeleteMyList(object sender, EventArgs e)
+      {
+         var list = (sender as MenuItem).CommandParameter as MyList;
+         //_mylist.Remove(list);
+         await _connectionMyList.DeleteAsync(list);
+         _myLists.Remove(list);
+      }
       /*      private async void ButtonClick(object sender, EventArgs e)
             {
                buttonSend.Text = "Cliked";
@@ -59,17 +76,14 @@ namespace Itproger
       {
          await Navigation.PushAsync(new Executed());
       }
-
       private async void GoToAll(object sender, EventArgs e)
       {
          await Navigation.PushAsync(new All());
       }
-
       private async void GoToToday(object sender, EventArgs e)
       {
          await Navigation.PushAsync(new Today());
       }
-
       private async void GoToSchedule(object sender, EventArgs e)
       {
          await Navigation.PushAsync(new Schedule());
@@ -82,12 +96,6 @@ namespace Itproger
       private async void InfoClicked(object sender, EventArgs e)
       {
          await DisplayAlert("lol", "text", "ok");
-      }
-
-      private void DeleteClicked(object sender, EventArgs e)
-      {
-         var list = (sender as MenuItem).CommandParameter as MyList;
-         //_mylist.Remove(list);
       }
 
       private async void listview_ItemSelected(object sender, SelectedItemChangedEventArgs e)

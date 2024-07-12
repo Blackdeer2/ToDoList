@@ -4,7 +4,9 @@
              x:Class="Itproger.ListDetailPage">
     <StackLayout>
         <Label Text="{Binding Name}" TextColor="#0179fc" FontSize="35" FontAttributes="Bold" ></Label>
-        <Button Text="test" Clicked="Button_Clicked" />
+        <Label Text="{Binding Id}" TextColor="#0179fc" FontSize="35" FontAttributes="Bold" ></Label>
+        <Entry x:Name="reminderNameEntry" Placeholder="List Name"/>
+        <Button Text="add reminder" />
         <ListView x:Name="listDetail">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -12,7 +14,11 @@
                         <StackLayout Orientation="Horizontal">
                             <RadioButton VerticalOptions="Center" TextColor="#007bfc" />
                             <Label Text="{Binding Title}" VerticalOptions="Center" FontSize="20" TextColor="Black"/>
+                            <Label Text="{Binding Id}" VerticalOptions="Center" FontSize="20" TextColor="Black"/>
                         </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -75,6 +75,8 @@
                         </StackLayout>
                     </Frame>
                 </Grid>
+                <Entry x:Name="listNameEntry" Placeholder="List Name"/>
+                <Button Text="add list" Clicked="AddList"/>
                 <Label Text="My lists" FontSize="25" FontAttributes="Bold" TextColor="Black"/>
                 <Frame BackgroundColor="#ffffff" CornerRadius="10" Padding="10,5">
                     <ListView x:Name="listview" ItemSelected="listview_ItemSelected">
@@ -82,18 +84,20 @@
                             <DataTemplate>
                                 <ViewCell>
                                     <StackLayout Orientation="Horizontal">
-                                        <Image Source="{Binding IconList}" WidthRequest="30" VerticalOptions="Center"/>
+                                        <Image x:Name="iconList" WidthRequest="30" VerticalOptions="Center"/>
                                         <Label Text="{Binding Name}" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                            <Label Text="{Binding Id}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
+                                                   FontSize="15"/>
                                             <Label Text="{Binding Count}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" 
                                                    FontSize="15"/>
-                                            <Image Source="{Binding IconArrowList}" WidthRequest="20" VerticalOptions="Center" 
+                                            <Image x:Name="iconArrowList" Source="{Binding IconArrowList}" WidthRequest="20" VerticalOptions="Center" 
                                                    HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
                                         </StackLayout>
                                     </StackLayout>
                                     <ViewCell.ContextActions>
                                         <MenuItem Text="Info" Clicked="InfoClicked" CommandParameter="{Binding .}"/>
-                                        <MenuItem Text="Delete" Clicked="DeleteClicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                        <MenuItem Text="Delete" Clicked="DeleteMyList" IsDestructive="True" CommandParameter="{Binding .}"/>
                                     </ViewCell.ContextActions>
                                 </ViewCell>
                             </DataTemplate>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Itproger")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae2d0ec80cd81c67bbec64f74106fbd7049014de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48072871224a70288a595c6271c7af3ad5046913")]
 [assembly: System.Reflection.AssemblyProductAttribute("Itproger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Itproger")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

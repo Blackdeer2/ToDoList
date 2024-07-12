@@ -46,7 +46,6 @@ namespace Itproger
             editor.HeightRequest = newHeight;
          }
       }
-
       double CalculateHeight(string text)
       {
          const double lineHeight = 20;

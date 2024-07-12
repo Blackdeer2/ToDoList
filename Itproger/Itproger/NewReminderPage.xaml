@@ -17,8 +17,8 @@
             </StackLayout>
             <Frame CornerRadius="10" BackgroundColor="#ffffff" Margin="10,5" Padding="20,5,20,5">
                 <StackLayout>
-                    <Entry Placeholder="Title"></Entry>
-                    <Editor x:Name="Notes"  Placeholder="Notes" AutoSize="TextChanges" HeightRequest="100"></Editor>
+                    <Entry x:Name="titleEtry" Placeholder="Title"></Entry>
+                    <Editor x:Name="notseEditor"  Placeholder="Notes" AutoSize="TextChanges" HeightRequest="100"></Editor>
                 </StackLayout>
             </Frame>
             <Frame CornerRadius="10" BackgroundColor="#ffffff" Margin="10,5" Padding="15,5,20,5">
